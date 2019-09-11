@@ -1,0 +1,21 @@
+p#notice
+  = notice
+p
+  strong
+    | Title:
+  = @publication.title
+p
+  strong
+    | Description:
+  = @publication.description
+p
+  strong
+    | Image url:
+  = @publication.image_url
+p
+  strong
+    | Sound url:
+  = @publication.sound_url
+= link_to 'Edit', edit_publication_path(@publication)
+|  | 
+= link_to 'Back', publications_path

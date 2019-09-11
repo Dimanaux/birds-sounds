@@ -1,0 +1,6 @@
+p#notice = notice
+
+span.navbar-brand = 'New Publication'
+= link_to 'Back', publications_path, class: 'btn btn-light'
+hr
+= render 'form', publication: @publication

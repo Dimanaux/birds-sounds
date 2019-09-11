@@ -1,0 +1,15 @@
+p#notice = notice
+
+span.navbar-brand = 'Index'
+= link_to 'New Publication', new_publication_path, class: 'btn btn-light'
+- @publications.each do |publication|
+  hr
+  .d-flex
+    .d-none.d-sm-block.mt-2
+      img.rounded src=publication.image_url
+    .flex-grow-1.ml-4.mr-5
+      h5.text-dark = publication.title
+      .text-sm.mb-2 = "Published on #{publication.created_at}"
+      .text-muted.text-sm = publication.description
+      br
+      audio src=publication.sound_url controls='true'

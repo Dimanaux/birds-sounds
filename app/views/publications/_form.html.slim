@@ -1,0 +1,10 @@
+= simple_form_for publication,
+                  defaults: { required: true,
+                              wrapper_html: { class: 'row' },
+                              label_html: { class: 'col-sm-auto col-form-label'},
+                              input_html: { class: 'col-sm' } } do |f|
+  = f.input :title
+  = f.input :description
+  = f.input :image_url
+  = f.input :sound_url
+  = f.button :submit, class: 'btn-light'
