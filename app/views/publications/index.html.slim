@@ -6,7 +6,8 @@ span.navbar-brand = 'Index'
   hr
   .d-flex
     .d-none.d-sm-block.mt-2
-      img.rounded src=publication.image_url
+      a href=publication.image_url
+        img.rounded src=publication.image_url
     .flex-grow-1.ml-4.mr-5
       h5.text-dark = publication.title
       .text-sm.mb-2 = "Published on #{publication.created_at}"
